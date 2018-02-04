@@ -30,9 +30,12 @@ class App extends Component {
             <Nav pullRight>
               <NavItem
                 eventKey={1}
+                // style={{ color: '#FFD700' }}
                 onClick={() => this.setState({ open: true })}
               >
-                <Glyphicon glyph="plus" /> Create Event
+                <span style={{ color: '#FFD700' }}>
+                  <Glyphicon glyph="plus" /> Create Event
+                </span>
               </NavItem>
             </Nav>
           </Navbar.Collapse>
