@@ -151,10 +151,4 @@ class Event extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    events: state
-  };
-}
-
-export default connect(mapStateToProps, { addEvent })(Event);
+export default connect(null, { addEvent })(Event);

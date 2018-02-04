@@ -7,8 +7,16 @@ import {
   FormControl,
   Button,
   Glyphicon,
-  Form
+  Form,
+  Popover,
+  OverlayTrigger
 } from 'react-bootstrap';
+
+const popoverHoverFocus = (
+  <Popover id="popover-trigger-hover-focus" title="See Location">
+    <strong>Map link to the Venue!</strong>
+  </Popover>
+);
 
 class Dashboard extends Component {
   constructor(props) {
@@ -74,7 +82,13 @@ class Dashboard extends Component {
 
                   <p>
                     <b>Venue: </b>
-                    <em>{event.venue}</em>
+                    <OverlayTrigger
+                      trigger={['hover', 'focus']}
+                      placement="right"
+                      overlay={popoverHoverFocus}
+                    >
+                      <em>{event.venue}</em>
+                    </OverlayTrigger>
                   </p>
                   <hr />
                   <p>

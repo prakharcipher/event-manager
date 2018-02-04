@@ -20,7 +20,7 @@ class App extends Component {
           <Navbar.Header>
             <Navbar.Brand>
               <a href="#home">
-                <b>Event-Manager</b>
+                <Glyphicon glyph="calendar" /> Event-Manager
               </a>
             </Navbar.Brand>
             <Navbar.Toggle />
