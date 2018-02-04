@@ -14,7 +14,6 @@ class Dashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      vis: 'visible',
       opt: ''
     };
   }
@@ -80,16 +79,24 @@ class Dashboard extends Component {
                   <hr />
                   <p>
                     <b>Date: </b>
-                    <em>{moment(new Date(event.date)).format('MMM Do YY')}</em>
+                    <em>{moment(new Date(event.date)).format('MMM Do YY')} </em>
+                    <em>
+                      (<b>{moment(new Date(event.date)).fromNow()}</b>)
+                    </em>
                   </p>
                   <p>
-                    <b>Price: </b>&#8377;<em>
-                      {event.price === '0' ? 'Free' : event.price}
+                    <b>Price: </b>
+                    <em>
+                      &#8377;{event.price === '0' ? 'Free' : `${event.price}`}
                     </em>
                   </p>
                   <p>
                     <b>Discount: </b>
-                    <em>{event.discount}</em>%
+                    <em>
+                      {event.discount === '0'
+                        ? 'No Discount'
+                        : `${event.discount}%`}
+                    </em>
                   </p>
                   <br />
                 </div>
@@ -111,7 +118,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        <div style={{ visibility: this.state.vis }}>
+        <div>
           <Form style={{ marginLeft: '45%' }} inline>
             <FormGroup controlid="formControlsSelect">
               <FormControl
