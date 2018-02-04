@@ -16,7 +16,6 @@ const event = action => {
 
 const removeById = (state = [], id) => {
   const events = state.filter(event => event.id !== id);
-  console.log('new reduced reminders', events);
   return events;
 };
 

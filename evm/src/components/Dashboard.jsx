@@ -75,7 +75,7 @@ class Dashboard extends Component {
 
                   <p>
                     <b>Venue: </b>
-                    <em>{event.desc}</em>
+                    <em>{event.venue}</em>
                   </p>
                   <hr />
                   <p>
@@ -89,7 +89,7 @@ class Dashboard extends Component {
                   </p>
                   <p>
                     <b>Discount: </b>
-                    <em>{event.price}</em>%
+                    <em>{event.discount}</em>%
                   </p>
                   <br />
                 </div>

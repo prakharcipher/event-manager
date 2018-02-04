@@ -10,7 +10,6 @@ export const addEvent = (name, desc, venue, date, price, discount) => {
     price: price,
     discount: discount
   };
-  console.log('action in addReminder', action);
   return action;
 };
 
@@ -19,7 +18,6 @@ export const deleteEvent = id => {
     type: DELETE_EVENT,
     id
   };
-  console.log('deleting in actions', action);
   return action;
 };
 
