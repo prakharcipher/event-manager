@@ -45,6 +45,15 @@ class Event extends Component {
         this.state.price,
         this.state.discount
       );
+      this.setState({
+        name: '',
+        desc: '',
+        venue: '',
+        date: '',
+        price: '',
+        discount: '',
+        show: false
+      });
       this.props.onHide();
     }
   }

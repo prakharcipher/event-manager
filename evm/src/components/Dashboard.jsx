@@ -75,8 +75,13 @@ class Dashboard extends Component {
                 <div className="w3-container w3-light-grey">
                   <br />
                   <p>
-                    <b>Description: </b>
-                    <em>{event.desc}</em>
+                    {/* <b>Description: </b> */}
+                    {event.desc === '' ? null : (
+                      <div>
+                        <b>Description: </b>
+                        <em>{event.desc}</em>
+                      </div>
+                    )}
                   </p>
                   <hr />
 
