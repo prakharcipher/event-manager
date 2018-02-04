@@ -53,8 +53,9 @@ class Dashboard extends Component {
             <div
               key={event.id}
               style={{
-                width: '25%',
-                height: '20%',
+                maxWidth: '25%',
+                maxHeight: '20%',
+                wordWrap: 'break-word',
                 display: 'inline-block',
                 paddingLeft: '10px',
                 paddingRight: '10px'
